@@ -2,12 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>AngularMicroFrontend</title>
+  <title>Angular Micro-Frontend</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="/assets/example-one/styles.css">
+  <link rel="stylesheet" href="/assets/example-two/styles.css">
+  <link rel="stylesheet" href="/assets/example-three/styles.css">
 </head>
 <body>
   <app-root></app-root>
+  <script src="/assets/example-one/polyfills.js" defer></script>
+  <script src="/assets/example-one/main.js" defer></script>
+  <script src="/assets/example-two/polyfills.js" defer></script>
+  <script src="/assets/example-two/main.js" defer></script>
+  <script src="/assets/example-three/polyfills.js" defer></script>
+  <script src="/assets/example-three/main.js" defer></script>
 </body>
 </html>
