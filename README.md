@@ -20,8 +20,8 @@ likely be deployed somewhere such as Amazon's S3 and delivered using CloudFront.
 If you'd like to run the application and see the working prototype for yourself, it's very easy:
 
 ```shell
-git clone https://github.com/jtneal/micro-frontend-poc.git
-cd micro-frontend-poc
+git clone https://github.com/jtneal/angular-micro-frontend.git
+cd angular-micro-frontend
 npm install
 npm run build:elements
 npm start
@@ -33,7 +33,7 @@ and see something that looks like this:
 
 ![Screenshot of running application](/example.png?raw=true)
 
-Voilà! See? Micro-Frontend architectures aren't _THAT_ complicated.
+Voilà! See? Micro-frontend architectures aren't _THAT_ complicated.
 
 ## Development
 
@@ -98,9 +98,9 @@ bundles you are downloading on initial load. If this becomes a concern for you,
 there are potential solutions. Angular natively supports
 [lazy-loading](https://angular.io/guide/lazy-loading-ngmodules).
 You can utilize this feature even with custom elements! Simply setup a module
-for each of your custom elements, and have the bundles load in dynmically within
-each of those modules rather than being hard coded in the index.html file. This
-will require some DOM manipulation, so I don't love it, but it works.
+for each of your custom elements, and have the bundles load in dynamically
+within each of those modules rather than being hard coded in the index.html
+file. This will require some DOM manipulation, so I don't love it, but it works.
 
 ## How this Project was Created
 
@@ -207,6 +207,11 @@ Update your index.html to bring in the styles and JS:
 </body>
 </html>
 ```
+
+Please note that it is entirely possible to only include one of these polyfills.
+However, including all of them won't break anything, it's just a bit of a waste.
+I recommend only including one and just making sure if you ever need to update
+polyfills, you do so within all the custom elements to keep them aligned.
 
 Update app.component.html and remove a few of the unnecessary blocks of code:
 
